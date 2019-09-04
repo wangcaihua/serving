@@ -11,6 +11,9 @@ curl -H "Content-Type: application/json" -X POST -d '{"instances": [[0.51483303,
 curl -H "Content-Type: application/json" -X POST -d '{"instances": [{"sparseIndices":[97,3,4,41,109,16,115,53,117,23,119,27,61],"sparseValues":[0.64,0.36,0.41,0.42,0.20,0.26,0.67,0.11,0.23,0.39,0.16,0.45,0.68]}]}' \
   localhost:8501/v1/models/lr/versions/6:predict
 
+curl -H "Content-Type: application/json" -X POST -d '{"instances": [{"sparseIndices":[97,3,4,41,109,16,115,53,117,23,119,27,61],"sparseValues":[0.64,0.36,0.41,0.42,0.20,0.26,0.67,0.11,0.23,0.39,0.16,0.45,0.68]}]}' \
+  localhost:8501/v1/models/wad/versions/0:predict
+
 #pmml model prediction test.
 curl -H "Content-Type: application/json" -X POST -d '{"instances": [{"x1":6.2, "x2":2.2, "x3":1.1, "x4":1.}]}' \
   localhost:8501/v1/models/lr/versions/6:predict
